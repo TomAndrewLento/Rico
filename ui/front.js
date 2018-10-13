@@ -2,11 +2,12 @@
 
 function CreateArtistButton(){
 	document.getElementById("demo").innerHTML=document.getElementById("ArtistNameTextbar").value;
-	var ArtistName={
+	var Artist={
 		name:"name",
 		artform:"ART"
 	};
-	ArtistName.name =document.getElementById("ArtistNameTextbar").value;
-	ArtistName.artform =document.getElementById("ArtformTextbar").value;
-	console.log(ArtistName.name+" "+ArtistName.artform);
+	Artist.name =document.getElementById("ArtistNameTextbar").value;
+	Artist.artform =document.getElementById("ArtformTextbar").value;
+	console.log(Artist.name+" "+ArtistName.artform);
 }
+
