@@ -1,0 +1,45 @@
+{
+  "Tests": [
+    {
+      "Convey": "auto-generated test for ArtistCreate",
+      "Zome": "Artist_Mgmt",
+      "FnName": "ArtistCreate",
+      "Input": {
+        "Artist": "Untitled",
+        "Description": "This is a blank slate"
+      },
+      "Output": "%h%"
+    },
+    {
+      "Convey": "auto-generated test for ArtistRead",
+      "Zome": "Artist_Mgmt",
+      "FnName": "ArtistRead",
+      "Input": "%h%",
+      "Output": {
+        "Artist": "Untitled",
+        "Description": "This is a blank slate"
+      }
+    },
+    {
+      "Convey": "auto-generated test for ArtistUpdate",
+      "Zome": "Artist_Mgmt",
+      "FnName": "ArtistUpdate",
+      "Input": "%h%",
+      "Output": "%h%"
+    },
+    {
+      "Convey": "auto-generated test for ArtistDelete",
+      "Zome": "Artist_Mgmt",
+      "FnName": "ArtistDelete",
+      "Input": "%h%",
+      "Output": "%h%"
+    },
+    {
+      "Convey": "auto-generated test for LikeArtist",
+      "Zome": "Artist_Mgmt",
+      "FnName": "LikeArtist",
+      "Input": "",
+      "Output": {}
+    }
+  ]
+}

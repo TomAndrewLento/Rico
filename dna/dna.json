@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "UUID": "26516da3-c493-4b29-83f9-17b2e813e775",
+  "Name": "Rico",
+  "Properties": {
+    "description": "Rico",
+    "language": "en"
+  },
+  "PropertiesSchemaFile": "properties_schema.json",
+  "DHTConfig": {
+    "HashType": "sha2-256"
+  },
+  "Zomes": [
+    {
+      "Name": "Artist_Mgmt",
+      "Description": "Prioritize Artist Recommendations by Similar Interest ",
+      "RibosomeType": "js",
+      "CodeFile": "artist_mgmt.js",
+      "Entries": [
+        {
+          "Name": "Artist",
+          "Required": true,
+          "DataFormat": "json",
+          "Sharing": "public",
+          "SchemaFile": "Artist.json"
+        }
+      ],
+      "Functions": [
+        {
+          "Name": "ArtistCreate",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "ArtistRead",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "ArtistUpdate",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "ArtistDelete",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "LikeArtist",
+          "CallingType": "json",
+          "Exposure": ""
+        }
+      ]
+    }
+  ]
+}

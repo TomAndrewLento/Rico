@@ -1,0 +1,33 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "Artist",
+    "Description"
+  ],
+  "properties": {
+    "Artist": {
+      "$id": "#/properties/Artist",
+      "type": "string",
+      "title": "The Artist Schema",
+      "default": "",
+      "examples": [
+        "Untitled"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "Description": {
+      "$id": "#/properties/Description",
+      "type": "string",
+      "title": "The Description Schema",
+      "default": "",
+      "examples": [
+        "This is a blank slate"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}
