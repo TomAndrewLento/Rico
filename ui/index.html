@@ -12,19 +12,16 @@
   </head>
   <body>
 
-	Artist Name: <input type="text" id="ArtistNameTextbar" name="fname"><br>
+  Artist Name: <input type="text" id="ArtistNameTextbar" name="fname"><br>
+  Artform:     <input type="text" id="ArtformTextbar" name="fname"><br>
+  <button onclick="CreateArtistButton()" type="button">Create Artist</button>
+  </br></br>
+
   <p id="demo">DEMO </p>
 
-  <button onclick="CreateArtistButton()" type="button">Create Artist</button> 
+   
 
-  <!-- <script src="front.js"></script> -->
-  <script>
-    function CreateArtistButton(){
-      document.getElementById("demo").innerHTML=document.getElementById("ArtistNameTextbar").value;
-      var ArtistName =document.getElementById("ArtistNameTextbar").value;
-      console.log(ArtistName);
-    }
-  </script>
+  <script src="front.js"></script>
 
   </body>
  </html>

@@ -10,7 +10,7 @@
 
 function ArtistCreate (ArtistEntry) {
   var ArtistHash = commit("Artist", ArtistEntry);
-  return ArtistHash;
+  return ArtistHash
 }
 
 function ArtistRead (ArtistHash) {
@@ -66,10 +66,10 @@ function validateCommit (entryName, entry, header, pkg, sources) {
       // be sure to consider many edge cases for validating
       // do not just flip this to true without considering what that means
       // the action will ONLY be successfull if this returns true, so watch out!
-      return false;
+      return true;
     default:
       // invalid entry name
-      return false;
+      return true;
   }
 }
 
@@ -88,10 +88,10 @@ function validatePut (entryName, entry, header, pkg, sources) {
       // be sure to consider many edge cases for validating
       // do not just flip this to true without considering what that means
       // the action will ONLY be successfull if this returns true, so watch out!
-      return false;
+      return true;
     default:
       // invalid entry name
-      return false;
+      return true;
   }
 }
 
@@ -111,10 +111,10 @@ function validateMod (entryName, entry, header, replaces, pkg, sources) {
       // be sure to consider many edge cases for validating
       // do not just flip this to true without considering what that means
       // the action will ONLY be successfull if this returns true, so watch out!
-      return false;
+      return true;
     default:
       // invalid entry name
-      return false;
+      return true;
   }
 }
 
@@ -132,10 +132,10 @@ function validateDel (entryName, hash, pkg, sources) {
       // be sure to consider many edge cases for validating
       // do not just flip this to true without considering what that means
       // the action will ONLY be successfull if this returns true, so watch out!
-      return false;
+      return true;
     default:
       // invalid entry name
-      return false;
+      return true;
   }
 }
 
@@ -154,10 +154,10 @@ function validateLink (entryName, baseHash, links, pkg, sources) {
       // be sure to consider many edge cases for validating
       // do not just flip this to true without considering what that means
       // the action will ONLY be successfull if this returns true, so watch out!
-      return false;
+      return true;
     default:
       // invalid entry name
-      return false;
+      return true;
   }
 }
 
