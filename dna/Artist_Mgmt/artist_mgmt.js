@@ -8,14 +8,27 @@
 //  Exposed functions with custom logic https://developer.holochain.org/API_reference
 // -----------------------------------------------------------------
 
-function ArtistCreate (ArtistEntry) {
-  var ArtistHash = commit("Artist", ArtistEntry);
-  return ArtistHash
+
+function ArtistCreate (params) {
+  var artistEntry = {
+    name: params.name,
+    artform: params.artform,
+  }
+  var artistHash = commit("artist", artistEntry);
+  debug(makeHash('anchor', params.name))
+  var artistLink = commit("artist_link", {
+    "Links":[
+      // {Base: makeHash('anchor', params.type), Link: teaHash, Tag: "gettea"}
+      {Base: App.DNA.Hash, Link: artistHash, Tag: "getartist"}
+    ]
+  })
+  debug(artistLink)
+  return artistHash;
 }
 
 function ArtistRead (ArtistHash) {
-  var Artist = get(ArtistHash);
-  return Artist;
+  var artist = get(ArtistHash);
+  return JSON.stringify(artist);
 }
 
 function ArtistUpdate (ArtistHash) {
