@@ -17,9 +17,20 @@
       "RibosomeType": "js",
       "CodeFile": "artist_mgmt.js",
       "Entries": [
+            {
+            "Name":"anchor",
+            "DataFormat": "string",
+            "Sharing": "public"
+        },
         {
+          "Name": "artist_link",
+          "DataFormat": "links",
+          "Sharing": "public"
+        },
+        {
+
           "Name": "Artist",
-          "Required": true,
+          "Required": false,
           "DataFormat": "json",
           "Sharing": "public",
           "SchemaFile": "Artist.json"

@@ -14,7 +14,8 @@ function ArtistCreate (params) {
     name: params.name,
     artform: params.artform,
   }
-  var artistHash = commit("artist", artistEntry);
+  debug(artistEntry);
+  var artistHash = commit("Artist", artistEntry);
   debug(makeHash('anchor', params.name))
   var artistLink = commit("artist_link", {
     "Links":[
