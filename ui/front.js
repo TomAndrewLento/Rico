@@ -21,18 +21,28 @@ document.querySelector('#createButton').addEventListener('click', e => {
     })).then(hash => {
         console.log("get hash")
         console.log(hash)
+
+        //cheaty
+	    // console.log("cheaty stuff:"+hash);
+		var artistEntry = {
+			nme: name,
+			art: artform,
+			hsh: hash,
+		}
+		cheatyList.push(artistEntry);
+
         endpoint('ArtistRead', hash).then(content => {
             console.log("get object")
             console.log(content)
         })
     })
 
-    console.log("cheaty stuff");
-	var artistEntry = {
-		nme: name,
-		art: artform,
-	}
-	cheatyList.push(artistEntry);
+ //    console.log("cheaty stuff:"+hash);
+	// var artistEntry = {
+	// 	nme: name,
+	// 	art: artform,
+	// }
+	// cheatyList.push(artistEntry);
 
 })
 

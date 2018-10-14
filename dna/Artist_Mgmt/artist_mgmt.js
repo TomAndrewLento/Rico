@@ -46,8 +46,15 @@ function ArtistDelete (ArtistHash) {
   return result;
 }
 
-function LikeArtist (params) {
-  // your custom code here
+function LikeArtist (entryHash) {
+  commit("Like",{
+    Links: [ { Base: App.Agent.Hash, Link: entryHash, Tag: "Like" } ]
+  })
+
+  commit("LikedBy",{
+    Links: [ { Base: entryHash, Link: App.Agent.Hash, Tag: "LikedBy" } ]
+  })
+
   return {};
 }
 
