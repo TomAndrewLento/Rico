@@ -44,7 +44,7 @@
         },
         {
           "Name": "ArtistRead",
-          "CallingType": "json",
+          "CallingType": "string",
           "Exposure": "public"
         },
         {
@@ -61,6 +61,12 @@
           "Name": "LikeArtist",
           "CallingType": "json",
           "Exposure": ""
+        },
+        {
+
+          "Name": "getAllArtists",
+          "CallingType": "string",
+          "Exposure": "public"
         }
       ]
     }

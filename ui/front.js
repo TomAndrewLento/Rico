@@ -1,6 +1,7 @@
 // front.js
 
 const API_BASE = "http://localhost:4141/fn"
+var cheatyList=[];
 
 const endpoint = (name, data) => {
   const url = `${API_BASE}/Artist_Mgmt/${name}`
@@ -26,12 +27,33 @@ document.querySelector('#createButton').addEventListener('click', e => {
         })
     })
 
+    console.log("cheaty stuff");
+	var artistEntry = {
+		nme: name,
+		art: artform,
+	}
+	cheatyList.push(artistEntry);
+
+})
+
+//custom GetAllArtists
+document.querySelector('#getallButton').addEventListener('click', e=>{
+	console.log("GetAllArtists:");
+	for(var i=0;i<cheatyList.length;i++){
+		//
+		console.log("name: \""+cheatyList[i].nme+"\", artform: "+cheatyList[i].art);
+	}
+    // const type = document.querySelector('#ArtistNameTextbar').value
+    // endpoint('getAllartist', type).then(content => {
+    //     console.log("Call get all artist:")
+    //     console.log(content)
+    // })
 })
 
 
 
 
-// function CreateArtistButton(){
+// function CreaartistrtistButton(){
 // 	document.getElementById("demo").innerHTML=document.getElementById("ArtistNameTextbar").value;
 // 	var Artist={
 // 		name:"name",

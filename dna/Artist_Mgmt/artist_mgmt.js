@@ -9,6 +9,7 @@
 // -----------------------------------------------------------------
 
 
+
 function ArtistCreate (params) {
   var artistEntry = {
     name: params.name,
@@ -16,18 +17,20 @@ function ArtistCreate (params) {
   }
   debug(artistEntry);
   var artistHash = commit("Artist", artistEntry);
-  debug(makeHash('anchor', params.name))
+  // debug(makeHash('anchor', params.name))
   var artistLink = commit("artist_link", {
     "Links":[
-      // {Base: makeHash('anchor', params.type), Link: teaHash, Tag: "gettea"}
+      // {Base: makeHash('anchor', params.type), Link: artistHash, Tag: "getartist"}
       {Base: App.DNA.Hash, Link: artistHash, Tag: "getartist"}
     ]
   })
-  debug(artistLink)
+  // cheatyList.push(artistEntry);
+  // debug(artistLink)
   return artistHash;
 }
 
 function ArtistRead (ArtistHash) {
+  debug(ArtistHash);
   var artist = get(ArtistHash);
   return JSON.stringify(artist);
 }
@@ -46,6 +49,22 @@ function ArtistDelete (ArtistHash) {
 function LikeArtist (params) {
   // your custom code here
   return {};
+}
+
+function getAllArtists(type) {
+  var artistlist = []
+  // var allartist = getLinks(makeHash('anchor', type), "getartist", {Load:true})
+  var allartist = getLinks(App.DNA.Hash, "getartist", {Load:true})
+  debug(allartist)
+  allartist.map(function(artist){
+    debug(artist)
+    artistlist.push({
+      type: artist.Entry.name,
+      grade: artist.Entry.artform,
+    })
+  })
+  debug(artistlist)
+  return artistlist
 }
 
 
