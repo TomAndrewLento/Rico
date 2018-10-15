@@ -1,26 +1,40 @@
 <html>
-  <head>
 
-    <meta charset="UTF-8">
-    <title>Recom</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700" rel="stylesheet">
-    <style type="text/css">
+<head>
 
-    </style>
-  </head>
-  <body>
+  <meta charset="UTF-8">
+  <title>Recom</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700"
+    rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <style type="text/css">
+  </style>
 
-  <input type="text" name="name"    id="ArtistNameTextbar" placeholder="Artist Name">
+</head>
+
+<body>
+  <nav class=" navbar navbar-light" style="background-color:#4494cc;">
+    <a class="navbar-brand" href="#">
+      <img src="img/logo.png" width="60" height="60" alt="">
+    </a>
+
+  </nav>
+  <br>
+
+  <H3>
+    Enter some of your favorite artist
+  </H3>
+  <br>
+  <input type="text" name="name" id="ArtistNameTextbar" placeholder="Artist Name">
   <input type="text" name="artform" id="ArtformTextbar" placeholder="Artform">
 
-  <button id="createButton" name="createButton" type="button">Create Artist</button>
-  <button id="getallButton" name="getallButton" type="button">Getall</button>
+  <button class="btn btn-success" id="createButton" name="createButton" type="button">Create Artist</button>
+  <button class="btn btn-info" id="getallButton" name="getallButton" type="button">Getall</button>
   </br></br>
 
   <script type="text/javascript" src="front.js"></script>
 
-  </body>
- </html>
+</body>
 
-
-
+</html>
